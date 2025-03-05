@@ -32,7 +32,7 @@ export default function PokemonSearchPage() {
             setPokemon(data);
         }
         } catch (error) {
-        console.error("Error fetching Pokémon:", error);
+        console.error("Error fetching Pokemon:", error);
         } finally {
         setIsLoading(false);
         }
@@ -140,7 +140,7 @@ export default function PokemonSearchPage() {
                                 </div>
                             ):(
                                 <div className="flex items-center justify-center h-[350px]">
-                                    <p className="text-gray-500">Try search for Pokémon by their name</p>
+                                    <p className="text-gray-500">Try search for Pokemon by their name</p>
                                 </div>
                             )}
                         </div>

@@ -6,14 +6,14 @@ export async function GET(request: Request) {
     const name = url.pathname.split("/").pop();
 
     if (!name) {
-      return NextResponse.json({ error: "Pokémon name is required" }, { status: 400 });
+      return NextResponse.json({ error: "Pokemon name is required" }, { status: 400 });
     }
 
     const apiUrl = `https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`;
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
-      return NextResponse.json({ error: "Pokémon not found" }, { status: 404 });
+      return NextResponse.json({ error: "Pokemon not found" }, { status: 404 });
     }
 
     const data = await response.json();
