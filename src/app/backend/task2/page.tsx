@@ -26,8 +26,8 @@ export default function BackendTask2() {
             {data.map((item, index) => (
               <tr key={index}>
                 <td>{item.date}</td>
-                <td>{item.time}</td>
-                <td>{item.full_name || "-"}</td>
+                <td>{item.number}</td>
+                <td>{item.full_name}</td>
               </tr>
             ))}
           </tbody>

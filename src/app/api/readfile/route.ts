@@ -21,7 +21,7 @@ export async function GET() {
             ) {
                 return {
                     date: parts[7],
-                    time: parts[8],
+                    number: parts[8],
                     full_name: `${parts[2]} ${parts[3]}`,
                 };
             }
