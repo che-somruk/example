@@ -65,8 +65,8 @@ export default function PokemonSearchPage() {
                 <img src="/pokemon-logo.png" alt="Pokemon Logo" className="w-40 sm:w-40" />
                 </div>
 
-                <div className="relative p-1 bg-[#FFD700] rounded-xl w-full sm:max-w-[90%] md:max-w-[70%] lg:max-w-[800px] mx-auto">
-                    <div className="p-1 bg-[#005B94] rounded-xl">
+                <div className="relative p-0.5 bg-[#FFD700] rounded-xl w-full sm:max-w-[90%] md:max-w-[70%] lg:max-w-[800px] mx-auto">
+                    <div className="p-0.5 bg-[#005B94] rounded-xl">
                         <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg w-full min-h-[430px]">
                             <div className="flex items-center bg-gray-100 p-3 rounded-md">
                                 <span className="text-gray-500 text-lg pr-2">🔍</span>
@@ -102,12 +102,15 @@ export default function PokemonSearchPage() {
                                         <div className="col-span-2 text-start sm:text-left">
                                             <div className="grid grid-cols-2 gap-4 mt-4 text-gray-700">
                                                 <h2 className="text-2xl font-bold text-black capitalize">{pokemon.name}</h2>
-                                                <button
-                                                    onClick={toggleFavorite}
-                                                    className={`text-end hover:text-yellow-500`}
-                                                    >
-                                                    {favorites.includes(pokemon.name) ? "⭐" : "☆"}
-                                                </button>
+                                                <div className="text-end">
+                                                    <button onClick={toggleFavorite} >
+                                                        {favorites.includes(pokemon.name) ? (
+                                                            <img src="/star-filled.png" alt="Filled Star" className="w-6 h-6" />
+                                                        ) : (
+                                                            <img src="/star-empty.png" alt="Empty Star" className="w-6 h-6" />
+                                                        )}
+                                                    </button>
+                                                </div>
                                             </div>
                                             <div className="grid grid-cols-2 gap-4 mt-4 text-gray-700">
                                                 <div>
