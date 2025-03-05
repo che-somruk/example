@@ -20,7 +20,7 @@ export default function BackendTask2() {
     <div className="flex justify-center items-center min-h-screen p-6">
       <div className="p-6 rounded-lg shadow-lg w-full max-w-4xl">
       <h1>Backend - ข้อ 2 (อ่านไฟล์)</h1><br/>
-      {loading ? <p>กำลังโหลด...</p> : (
+      {loading ? <p>Loading...</p> : (
         <table border={1} style={{ width: "100%", textAlign: "left", borderCollapse: "collapse" }}>
           <tbody>
             {data.map((item, index) => (
