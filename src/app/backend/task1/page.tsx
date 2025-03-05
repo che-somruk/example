@@ -28,7 +28,7 @@ export default function BackendPage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-sm text-center">
-        <h1 className="text-lg font-bold text-gray-900 flex items-center justify-center gap-2 mb-4">
+        <h1 className="text-lg font-bold text-gray-900 flex items-center  gap-2 mb-4">
           Backend - ข้อ 1
         </h1>
 
