@@ -1,25 +1,33 @@
 import { NextResponse } from "next/server";
 
 export function setStringHdp(number: number): string {
-    if (number === Math.floor(number)) {
-        return number === 0 ? "0" : `${number}.0`;
+    const isNegative = number < 0;
+    const positiveNumber = Math.abs(number);
+
+    if(positiveNumber === 0){
+        return `0`;
     }
 
-    const base = Math.floor(number);
-    const decimal = number - base;
+    if (positiveNumber === Math.floor(positiveNumber)) {
+        return isNegative ? `${-positiveNumber}.0` : `${positiveNumber}.0`;
+    }
+
+    const base = Math.floor(positiveNumber);
+    const decimal = positiveNumber - base;
 
     if (decimal === 0.25 || decimal === -0.25) {
-        return `${base}/3.5`;
+        return isNegative ? `${-base}/${base}.5` : `${base}/${base}.5`;
     }
 
     if (decimal === 0.75 || decimal === -0.75) {
-        return `${base + 0.5}/${base + 1}`;
+        return isNegative ? `${-(base + 0.5)}/${-(base + 1)}` : `${base + 0.5}/${base + 1}`;
     }
 
-    return `${number}`;
+    if (decimal === 0.5 || decimal === -0.5) {
+        return isNegative ? `${-(base + 0.5)}` : `${base + 0.5}`;
+    }
+    return isNegative ? `${-positiveNumber}` : `${positiveNumber}`;
 }
-  
-  
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
