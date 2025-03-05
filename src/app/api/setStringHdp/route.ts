@@ -20,7 +20,7 @@ export function setStringHdp(number: number): string {
     }
 
     if (decimal === 0.75 || decimal === -0.75) {
-        return isNegative ? `${-(base + 0.5)}/${-(base + 1)}` : `${base + 0.5}/${base + 1}`;
+        return isNegative ? `${-(base + 0.5)}/${(base + 1)}` : `${base + 0.5}/${base + 1}`;
     }
 
     if (decimal === 0.5 || decimal === -0.5) {

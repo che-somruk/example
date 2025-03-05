@@ -69,7 +69,7 @@ export default function PokemonSearchPage() {
                     <div className="p-0.5 bg-[#005B94] rounded-xl">
                         <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg w-full min-h-[430px]">
                             <div className="flex items-center bg-gray-100 p-3 rounded-md">
-                                <span className="text-gray-500 text-lg pr-2">🔍</span>
+                                <span className="text-gray-500 text-lg pr-2"><img src="/search.png" alt="Filled Star" className="w-4 h-4" /></span>
                                 <input
                                     type="text"
                                     placeholder="Search"
