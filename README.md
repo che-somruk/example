@@ -22,7 +22,4 @@ To install the necessary dependencies, run the following command:
 ```bash
 npm install
 
-## Run Project
-
-```bash
 npm run dev
